@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'
+import Container from '../components/container.astro'
+const {frontmatter} = Astro.props
+---
+<style>
+p {
+  flex: 1 1 auto
+}
+</style>
+
+<Layout title={frontmatter.title}>
+	<main class="space-y-40 mb-40">
+    <div>
+    <div class="h-32 bg-sky-600 flex items-center justify-center" >
+      <h1 class="font-bold text-center text-5xl text-white">{frontmatter.title}</h1>
+    </div>
+		<div class="text-xl pt-8 leading-8">
+      <slot />
+    </div>
+  </div>
+	</main>
+</Layout>
