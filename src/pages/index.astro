@@ -15,10 +15,10 @@ import CircleProgress from '../components/CircleProgress.astro'
 	}
 
 	.heading-text-heading {
-    font-size: var(--size-h2);
-    line-height: 1;
-    font-weight: 900;
-    text-transform: uppercase;
+    /* font-size: var(--size-h2); */
+    /* line-height: 1; */
+    /* font-weight: 900; */
+    /* text-transform: uppercase; */
 	}
 
 	.wwd-items {
@@ -63,49 +63,47 @@ import CircleProgress from '../components/CircleProgress.astro'
 	<main class="">
 		<Hero />
 		<div class="py-16 px-6 bg-zinc-50">
-			<div class="flex flex-row justify-evenly">
-				<div class="flex-initial max-w-50 px-2">
-					<img src="uncle-buck.jpeg" style="width: 90%" class="ub-image" />
+			<div class="max-w-7xl mx-auto">
+				<h2 class="text-right text-5xl text-zinc-500 py-8">Who are We</h2>
+				<div class="max-w-7xl mx-auto flex flex-row justify-evenly">
+					<div class="flex-initial max-w-50 px-2">
+						<img src="uncle-buck.jpeg" style="width: 90%" class="ub-image" />
+					</div>
+					<div class="flex-initial max-w-50 px-2">
+						
+						<p class="py-8">Uncle Buck’s is a non-profit organization that was Birthed out of the loss of a wonderful father, pastor, and friend.
+							<!-- Uncle Buck’s provides restoration to young men across the greater Atlanta area.  -->
+							<!-- Our founder noticed that there was a need for more than just the latest pair of sneakers for young men in the spiritual, professional, and educational realms.  -->
+							After the loss of his father, Rev. Curlee “Uncle Buck” Windham, Sr., Todd Windham turned their bonding time into a service for young men, restoring quality shoes for quality men. 
+						</p>
 				</div>
-				<div class="flex-initial max-w-50 px-2 heading-text-heading" style="font-size: 20px;
-				line-height: 2.0;
-				font-weight: 200;">
-					<h1>Who are We</h1>
-					<p>Uncle Buck’s is a non-profit organization that was Birthed out of the loss of a wonderful father, pastor, and friend.
-						 <!-- Uncle Buck’s provides restoration to young men across the greater Atlanta area.  -->
-						 <!-- Our founder noticed that there was a need for more than just the latest pair of sneakers for young men in the spiritual, professional, and educational realms.  -->
-						 After the loss of his father, Rev. Curlee “Uncle Buck” Windham, Sr., Todd Windham turned their bonding time into a service for young men, restoring quality shoes for quality men. 
-					</p>
-				</div>
-				
 			</div>
 		</div>
-		<div class="py-6 px-6 bg-white">
-			<h2><center>What We Do</center></h2>
-			<div class="wwd-items">
-				<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}>
-				</Card>
-				<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}>
-					<object data="tie-svgrepo-com.svg" type="image/svg+xml" slot="image"></object>
-				</Card>
-				<Card title="Community Services" image={"community-group-leader-svgrepo-com.svg"}>
-					<object data="hand-heart-svgrepo-com.svg" type="image/svg+xml" slot="image"></object>
-				</Card>
-			</div>	
 		</div>
-		<div class="py-6 px-6 bg-blue-600 text-white">
-			<h2>Intro to the who are we</h2>
-			<div class="flex flex-row justify-evenly">
-				<div class="flex-initial max-w-50 px-2 heading-text-heading" style="font-size: 20px;
-				line-height: 2.0;
-				font-weight: 200;">
-					<h1>Who are We</h1>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Cursus sit amet dictum sit amet justo.
-					</p>
+		<hr />
+		<div class="py-16 px-6 bg-zinc-50">
+			<div class="max-w-7xl mx-auto">
+				<h2 class="text-left text-5xl text-zinc-500  py-8">What We Do</h2>
+				<div class="wwd-items">
+					<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
+					<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
+					<Card title="Community Services" image={"group-svgrepo-com.svg"}></Card>
 				</div>
-				<div class="flex-initial max-w-50 px-2">
-					<CircleProgress />
+			</div>
+		</div>
+		<hr />
+		<div class="py-16 px-6 bg-zinc-50">
+			<div class="max-w-7xl mx-auto">
+				<h2 class="text-right text-5xl text-zinc-500  py-8">Who We Serve</h2>
+				<div class="flex flex-row justify-evenly py-8">
+					<div class="flex-initial max-w-50 px-2 heading-text-heading">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Cursus sit amet dictum sit amet justo.
+						</p>
+					</div>
+					<div class="flex-initial max-w-50 px-2">
+						<CircleProgress />
+					</div>
 				</div>
 			</div>
 		</div>
