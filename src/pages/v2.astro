@@ -2,7 +2,7 @@
 //import Layout from '../layouts/Layout-light.astro';
 import Hero from '../components/v2/Hero.astro'
 import Card from '../components/Card.astro';
-import AppFooter from '../components/AppFooter.astro'
+import AppFooter from '../components/v2/Footer.astro'
 import Container from "../components/Container.astro"
 
 
@@ -37,12 +37,27 @@ const backgroundColor =  'bg-slate-950'
       margin: 0;
   }
 
-  h2 {
+  .subtitle {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     font-size: 48px;
-    color: rgb(3,7,18)
+    /* color: rgb(3,7,18) */
+     background: -webkit-linear-gradient(#000000, #4897e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+
+  /* .subtitle:after {
+    content:' ';
+    display:block;
+    border:2px solid #4897e8;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+  } */
 
   p {
     font-size: 20px;
@@ -152,10 +167,10 @@ const backgroundColor =  'bg-slate-950'
 				<div class="max-w-7xl mx-auto">
           <div class="max-w-7xl mx-auto flex flex-row justify-evenly">
             <div class="flex-initial max-w-50 px-2">
-              <img src="uncle-buck.jpeg" style="width: 90%" class="ub-image" />
+              <img src="pexels-dellon-thomas-2216607.jpg" style="width: 90%" class="ub-image" />
 						</div>
 						<div class="flex-initial max-w-50 px-2">
-              <h2 class="text-left text-5xl text-zinc-500 py-8">ABOUT US</h2>
+              <h2 class="text-left text-5xl text-zinc-500 py-8 subtitle">ABOUT US</h2>
 							<p>
                 At Uncle Buck's, our mission is to uplift and empower underprivileged men, 
                 fostering lasting transformation in their lives and communities. 
@@ -165,7 +180,7 @@ const backgroundColor =  'bg-slate-950'
 							<!-- <p class="py-8">Uncle Buck’s is a non-profit organization that was Birthed out of the loss of a wonderful father, pastor, and friend. -->
 								<!-- Uncle Buck’s provides restoration to young men across the greater Atlanta area.  -->
 								<!-- Our founder noticed that there was a need for more than just the latest pair of sneakers for young men in the spiritual, professional, and educational realms.  -->
-								After the loss of his father, Rev. Curlee “Uncle Buck” Windham, Sr., Todd Windham turned their bonding time into a service for young men, restoring quality shoes for quality men. 
+								<!-- After the loss of his father, Rev. Curlee “Uncle Buck” Windham, Sr., Todd Windham turned their bonding time into a service for young men, restoring quality shoes for quality men. -->
 							<!-- </p> -->
 					</div>
 				</div>
@@ -174,19 +189,26 @@ const backgroundColor =  'bg-slate-950'
       <hr />
 			<div class="py-16 px-6 bg-zinc-50">
 				<div class="max-w-7xl mx-auto">
-					<h2 class="text-left text-5xl text-zinc-500  py-8">WHO WE SERVE</h2>
-					<p>
-            Uncle Buck’s provides restoration to young men across the greater Atlanta area 
-            through our work in restoring gently worn shoes to a quality worthy of aiding men 
-            in their next step in life.
-          </p>
-          <p>Learn more about who we serve</p>
-				</div>
-			</div>
+          <div class="max-w-7xl mx-auto flex flex-row justify-evenly">
+            <div class="flex-initial max-w-50 px-2">
+              <h2 class="text-left text-5xl text-zinc-500  py-8 subtitle">WHO WE SERVE</h2>
+              <p>
+                Uncle Buck’s provides restoration to young men across the greater Atlanta area 
+                through our work in restoring gently worn shoes to a quality worthy of aiding men 
+                in their next step in life.
+              </p>
+              <p>Learn more about who we serve</p>
+				    </div>
+            <div class="flex-initial max-w-50 px-2">
+              <img src="atlanta-city-downtown-architecture-buildings-d29386-1024.jpg" style="width: 90%" class="ub-image" />
+            </div>
+          </div>
+			  </div>
+      </div>
 			<hr />
 			<div class="py-16 px-6 bg-zinc-50">
 				<div class="max-w-7xl mx-auto">
-					<h2 class="text-left text-5xl text-zinc-500  py-8">INITIATIVES</h2>
+					<h2 class="text-left text-5xl text-zinc-500  py-8 subtitle">INITIATIVES</h2>
 					<div class="wwd-items">
 						<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
 						<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
