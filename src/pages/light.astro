@@ -1,0 +1,204 @@
+---
+//import Layout from '../layouts/Layout-light.astro';
+import Hero from '../components/Hero.astro'
+import Card from '../components/Card.astro';
+import AppFooter from '../components/AppFooter.astro'
+import Container from "../components/Container.astro"
+
+
+const data = {
+    title: "Uncle Buck's",
+		tagline1: "Shoes For the Soul",
+		tagline2: "Soul",
+    subheader: "Equipping young men to put their best foot forward since 2023.",
+    links: [
+        { to: "./", label: "Home"},
+        { to: "./about", label: "About Us"},
+        { to: "./service", label: "Who We Serve"},
+        { to: "./initiatives", label: "Initiatives"},
+        { to: "./board", label: "Our Board"},
+        { to: "./support", label: "Support"},
+        { to: "./contact", label: "Contact Us"},
+    ]
+}
+
+const backgroundColor = 'bg-slate-950' 
+//const backgroundColor = 'bg-gray-900'
+---
+
+<style>
+	html {
+        /* font-family: Urbanist, sans-serif; */
+        font-family: sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+    }
+
+		p {
+			font-size: 20px;
+			line-height: 2.0;
+		}
+
+
+		.hero {
+			height: 200px
+		}
+	.max-w-50 {
+		max-width: 50%
+	}
+
+	img {
+		border-radius: 7px;
+	}
+
+	.heading-text-heading {
+    /* font-size: var(--size-h2); */
+    /* line-height: 1; */
+    /* font-weight: 900; */
+    /* text-transform: uppercase; */
+	}
+
+	.wwd-items {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 4em;
+		margin: auto;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
+        <title>{data.title}</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </head>
+    <!-- <body class="bg-white dark:bg-gray-900 flex flex-col min-h-screen"> -->
+			<body class=`${backgroundColor} flex flex-col min-h-screen`></body>
+      <header>
+        <nav class="z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+              <a href="" class="flex items-center">
+                  <img src="logo-minimal.png" class="h-16 mr-3" alt="Uncle Buck's Logo" />
+                  <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white text-sky-600">
+                    {data.title}
+                  </span>
+              </a>
+              <button 
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" 
+                data-collapse-toggle="navbar-default" 
+                type="button" 
+                aria-controls="navbar-default" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+              </button>
+              <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul 
+                  
+                  class="font-medium flex p-4 md:p-0 mt-4 flex-row ">
+                  {
+                    data.links.map(link => (
+                        <li class="p-4 text-white">
+                          <a href={link.to} 
+                              class="block">
+                              {link.label}
+                            </a>
+                        </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="">
+			<div id="hero" class=`hero relative py-32 m-h-5/6 ${backgroundColor} flex flex-row justify-center items-center` id="home">
+			<!-- <div class="relative m-h-5/6 bg-gradient-to-b pb-24" id="home"> -->
+				<!-- <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+						<div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+						<div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+				</div> -->
+				<div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 ">
+						<div>
+							<h1 class="text-gray-900 dark:text-white font-bold text-7xl">{data.tagline1}</h1>
+							<h2 class="text-gray-900 dark:text-white italic text-3xl">{data.subheader}</h2>
+						</div>
+						<!-- <div class="relative pt-36 ml-auto flex flex-row items-center justify-between h-5/6 " id="hero">
+								<div class="flex-auto text-left">
+										<h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
+											{data.tagline1}<br/>
+											<span class="dark:text-white text-sky-600">{data.tagline2}</span>
+										</h1>
+										<p class="mt-8 w-2/3 text-left text-gray-700 dark:text-gray-300">
+											{data.subheader}
+										</p>
+										
+								</div>
+								<div class="flex-auto w-1/2">
+									<img src="shoes-tp1.png" />
+								</div>
+						</div> -->
+					</div>
+		</div>
+			<div class="py-16 px-16 bg-zinc-50">
+				<div class="max-w-7xl mx-auto">
+					<h2 class="text-right text-5xl text-zinc-500 py-8">Who are We</h2>
+					<div class="max-w-7xl mx-auto flex flex-row justify-evenly">
+						<div class="flex-initial max-w-50 px-2">
+							<img src="uncle-buck.jpeg" style="width: 90%" class="ub-image" />
+						</div>
+						<div class="flex-initial max-w-50 px-2">
+							
+							<p class="py-8">Uncle Buck’s is a non-profit organization that was Birthed out of the loss of a wonderful father, pastor, and friend.
+								<!-- Uncle Buck’s provides restoration to young men across the greater Atlanta area.  -->
+								<!-- Our founder noticed that there was a need for more than just the latest pair of sneakers for young men in the spiritual, professional, and educational realms.  -->
+								After the loss of his father, Rev. Curlee “Uncle Buck” Windham, Sr., Todd Windham turned their bonding time into a service for young men, restoring quality shoes for quality men. 
+							</p>
+					</div>
+				</div>
+			</div>
+			</div>
+			<hr />
+			<div class="py-16 px-6 bg-zinc-50">
+				<div class="max-w-7xl mx-auto">
+					<h2 class="text-left text-5xl text-zinc-500  py-8">What We Do</h2>
+					<div class="wwd-items">
+						<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
+						<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
+						<Card title="Community Services" image={"group-svgrepo-com.svg"}></Card>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<!-- <div class="py-16 px-6 bg-zinc-50">
+				<div class="max-w-7xl mx-auto">
+					<h2 class="text-right text-5xl text-zinc-500  py-8">Who We Serve</h2>
+					<div class="flex flex-row justify-evenly py-8">
+						<div class="flex-initial max-w-50 px-2 heading-text-heading">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Cursus sit amet dictum sit amet justo.
+							</p>
+						</div>
+						<div class="flex-initial max-w-50 px-2">
+							<CircleProgress />
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</main>
+        <AppFooter />
+    </body>
+</html>

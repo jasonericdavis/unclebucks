@@ -1,0 +1,57 @@
+---
+import Container from "./Container.astro"
+
+const data = {
+  title: "Uncle Buck's",
+  tagline1: "Shoes For the Soul",
+  tagline2: "Soul",
+  subheader: "Equipping young men to put their best foot forward since 2023."
+}
+
+const backgroundColor =  'bg-slate-950' 
+---
+
+<style>
+  #home {
+    /* background: linear-gradient(90deg, #2f3441 40%, #FFFFFF 40%) */
+    /* background: linear-gradient(90deg, #0693e3 40%, #ffffff 40%) */
+    /* rgba(95,195,228,.7) */
+  }
+
+  h1 {
+    color: #4897e8
+  }
+
+  /* .hero-right {
+    background-image: url("shoes-tp2.png");
+    background-size: auto
+  } */
+
+  .hero {
+    height: 400px;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(3,7,18, 0.0) 40%, hsl(200deg 9.09% 6.47%)) /*, url('pexels-dellon-thomas-2216607.jpg') top right / contain no-repeat; */
+    /* background-image: url("pexels-dellon-thomas-2474307.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right; */
+  } 
+
+   
+</style>
+<div class="hero m-h-5/6 bg-gradient-to-b pb-24">
+    <!-- <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+    </div> -->
+    <!-- <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+      <div class="blur-[106px] h-56 bg-gradient-to-br from-blue-700 to-purple-400"></div>
+      <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600"></div>
+  </div> -->
+    <Container>
+      <div class=`relative py-32`>
+        <h1 class="text-gray-900 dark:text-white font-bold text-7xl">{data.tagline1.toUpperCase()}</h1>
+        <h2 class="text-gray-900 dark:text-white italic text-3xl">{data.subheader}</h2>
+      </div>
+    </Container>
+</div>

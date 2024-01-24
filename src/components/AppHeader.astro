@@ -3,8 +3,12 @@ const data = {
     title: "Uncle Buck's",
     links: [
         { to: "./", label: "Home"},
-        { to: "who_are_we", label: "Who Are We"},
-        { to: "#Home", label: "What We Do"}
+        { to: "./about", label: "About Us"},
+        { to: "./service", label: "Who We Serve"},
+        { to: "./initiatives", label: "Initiatives"},
+        { to: "./board", label: "Our Board"},
+        { to: "./support", label: "Support"},
+        { to: "./contact", label: "Contact Us"},
     ]
 }
 ---
@@ -38,7 +42,7 @@ const data = {
               class="font-medium flex p-4 md:p-0 mt-4 flex-row ">
               {
                 data.links.map(link => (
-                    <li class="p-4">
+                    <li class="p-4 text-white">
                       <a href={link.to} 
                           class="block">
                           {link.label}
