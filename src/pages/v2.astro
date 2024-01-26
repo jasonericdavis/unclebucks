@@ -91,14 +91,23 @@ const backgroundColor =  'bg-slate-950'
 
   .who-we-serve {
     position: relative;
-    background-image: url("atlanta-city-downtown-architecture-buildings-d29386-1024.jpg");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("atlanta-city-downtown-architecture-buildings-d29386-1024.jpg");
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    color: white
+    color: white;  
   }
 
-  .who-we-serve::before {
+  .who-we-serve-h2 :{
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    background: -webkit-linear-gradient(#FFFFFF, #4897e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* .who-we-serve::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -106,7 +115,7 @@ const backgroundColor =  'bg-slate-950'
     bottom: 0px;
     left: 0px;
     background-color: rgba(3,7,18,0.75); 
-  }
+  } */
 
 </style>
 
@@ -210,12 +219,17 @@ const backgroundColor =  'bg-slate-950'
 				<div class="max-w-7xl mx-auto">
           <div class="max-w-7xl mx-auto flex flex-row justify-evenly">
             <div class="flex-initial max-w-50 px-2">
-              <h2 class="text-left text-5xl text-zinc-500  py-8 subtitle">WHO WE SERVE</h2>
+              <h2 class="text-left text-5xl text-zinc-500 py-8 subtitle">WHO WE SERVE</h2>
               <p>
                 Uncle Buck’s provides restoration to young men across the greater Atlanta area 
                 through our work in restoring gently worn shoes to a quality worthy of aiding men 
                 in their next step in life.
               </p>
+              <div class="wwd-items">
+                <Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
+                <Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
+                <Card title="Community Services" image={"group-svgrepo-com.svg"}></Card>
+              </div>
               <p>Learn more about who we serve</p>
 				    </div>
             <div class="flex-initial max-w-50 px-2">
@@ -229,8 +243,10 @@ const backgroundColor =  'bg-slate-950'
 				<div class="max-w-7xl mx-auto">
 					<h2 class="text-left text-5xl text-zinc-500  py-8 subtitle">INITIATIVES</h2>
           <p>
-            Our founder frequently states, 
-            <pre>“We break things down, to build them back up” </pre>
+            Our founder frequently states,
+          </p>
+            <blockquote>“We break things down, to build them back up” </blockquote>
+          <p>
             and that is how we approach everything we do. 
             We take our time to ensure that every interaction establishes rapport, builds confidence, 
             and empowers young men to lead with integrity.
@@ -239,14 +255,14 @@ const backgroundColor =  'bg-slate-950'
             By partnering with local organizations, schools, and churches we are able to meet the needs 
             of young men while building our community outreach mission. 
             These partnerships are vital to the continued growth of Uncle Buck’s and helps us identify 
-            ways that we can be advocates for the men we serve.
+            ways that we can be advocates for the men we serve. Our initiatives are centered around three main focuses:
           </p>
+					<div class="wwd-items">
+            <Card title="Education" image={"graduation-cap-svgrepo-com.svg"}></Card>
+						<Card title="Peronal Development" image={"tie-svgrepo-com.svg"}></Card>
+						<Card title="Community" image={"group-svgrepo-com.svg"}></Card>
+					</div>
           <button>Learn More About Partnering With Us</button>
-					<!-- <div class="wwd-items">
-						<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
-						<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
-						<Card title="Community Services" image={"group-svgrepo-com.svg"}></Card>
-					</div> -->
 				</div>
 			</div>
 			<hr />
