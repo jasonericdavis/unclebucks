@@ -89,6 +89,25 @@ const backgroundColor =  'bg-slate-950'
 		padding-bottom: 2rem;
 	}
 
+  .who-we-serve {
+    position: relative;
+    background-image: url("atlanta-city-downtown-architecture-buildings-d29386-1024.jpg");
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: white
+  }
+
+  .who-we-serve::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(3,7,18,0.75); 
+  }
+
 </style>
 
 <!DOCTYPE html>
@@ -187,7 +206,7 @@ const backgroundColor =  'bg-slate-950'
 			</div>
 			</div>
       <hr />
-			<div class="py-16 px-6 bg-zinc-50">
+			<div class="py-16 px-6 bg-zinc-50 who-we-serve">
 				<div class="max-w-7xl mx-auto">
           <div class="max-w-7xl mx-auto flex flex-row justify-evenly">
             <div class="flex-initial max-w-50 px-2">
@@ -200,7 +219,7 @@ const backgroundColor =  'bg-slate-950'
               <p>Learn more about who we serve</p>
 				    </div>
             <div class="flex-initial max-w-50 px-2">
-              <img src="atlanta-city-downtown-architecture-buildings-d29386-1024.jpg" style="width: 90%" class="ub-image" />
+              <!--<img src="atlanta-city-downtown-architecture-buildings-d29386-1024.jpg" style="width: 90%" class="ub-image" /> -->
             </div>
           </div>
 			  </div>
@@ -209,11 +228,25 @@ const backgroundColor =  'bg-slate-950'
 			<div class="py-16 px-6 bg-zinc-50">
 				<div class="max-w-7xl mx-auto">
 					<h2 class="text-left text-5xl text-zinc-500  py-8 subtitle">INITIATIVES</h2>
-					<div class="wwd-items">
+          <p>
+            Our founder frequently states, 
+            <pre>“We break things down, to build them back up” </pre>
+            and that is how we approach everything we do. 
+            We take our time to ensure that every interaction establishes rapport, builds confidence, 
+            and empowers young men to lead with integrity.
+          </p>
+          <p>
+            By partnering with local organizations, schools, and churches we are able to meet the needs 
+            of young men while building our community outreach mission. 
+            These partnerships are vital to the continued growth of Uncle Buck’s and helps us identify 
+            ways that we can be advocates for the men we serve.
+          </p>
+          <button>Learn More About Partnering With Us</button>
+					<!-- <div class="wwd-items">
 						<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
 						<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
 						<Card title="Community Services" image={"group-svgrepo-com.svg"}></Card>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<hr />
