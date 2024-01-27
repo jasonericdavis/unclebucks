@@ -18,6 +18,9 @@ const { title, image } = Astro.props;
         "text";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr; 
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+		border-radius: 10px;
 	}
 
 	.image {
@@ -30,7 +33,8 @@ const { title, image } = Astro.props;
 
 	.title {
 		grid-area: heading;
-		font-size: 20px;
+		font-family: 'Lato', sans-serif;
+		font-size: 24px;
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
@@ -40,6 +44,7 @@ const { title, image } = Astro.props;
     text-transform: uppercase;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		color: #224F7D;
 	}
 
 </style>

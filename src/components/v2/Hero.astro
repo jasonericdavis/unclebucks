@@ -43,7 +43,30 @@ const backgroundColor =  'bg-slate-950'
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right; */
-  } 
+  }
+
+  .cta-button {
+    background-color: transparent; /*#224F7D;*/  /* #4897e8 */;
+    box-shadow: 2px 5px #224F7D;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+    color: #fff;
+    font-family: 'Latto', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  .cta-button:hover{
+    background-color: #448fdc;
+  }
+  .cta-button:active{
+    transform: scale(0.95);
+  }
 
    
 </style>
@@ -60,7 +83,10 @@ const backgroundColor =  'bg-slate-950'
       <div class=`relative py-32`>
         <h1 class="text-gray-900 dark:text-white font-bold text-7xl">{data.tagline1.toUpperCase()}</h1>
         <h2 class="text-white dark:text-white italic text-3xl">{data.subheader}</h2>
-        <h3>Partner With Us Today</h3>
+        <!-- <h3>Partner With Us Today</h3> -->
+        <div class="py-8">
+          <button style={{ display: 'block'}} class="cta-button"><a href="">Partner With Us Today</a></button>
+        </div>
       </div>
     </Container>
 </div>

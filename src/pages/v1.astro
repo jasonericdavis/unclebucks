@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'
+import Card from '../components/Card.astro';
+import Navigation from '../components/navigation.astro'
+import CircleProgress from '../components/CircleProgress.astro'
+---
+<style>
+	.max-w-50 {
+		max-width: 50%
+	}
+
+	img {
+		border-radius: 7px;
+	}
+
+	.heading-text-heading {
+    /* font-size: var(--size-h2); */
+    /* line-height: 1; */
+    /* font-weight: 900; */
+    /* text-transform: uppercase; */
+	}
+
+	.wwd-items {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 4em;
+		margin: auto;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	/* .wwd-items-item {
+		display: grid;
+		grid-template-areas:
+        "image"
+        "heading"
+        "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr; 
+	} */
+
+	/* main {
+		font-family: Jazmin-Regular,Cambria,Times New Roman,Times,serif
+	} */
+
+	/* .ub-image {
+    padding:0 0 30px 30px;
+    position:relative;
+	}
+	.ub-image::before{
+			content:"";
+			width:100%;
+			height:100%;
+			position:absoulute;
+			left:-25px;
+			bottom:-25px;
+			background-color:red;
+	} */
+</style>
+
+<Layout title="Welcome to Astro.">
+	<main class="">
+		<Hero />
+		<div class="py-16 px-6 bg-zinc-50">
+			<div class="max-w-7xl mx-auto">
+				<h2 class="text-right text-5xl text-zinc-500 py-8">Who are We</h2>
+				<div class="max-w-7xl mx-auto flex flex-row justify-evenly">
+					<div class="flex-initial max-w-50 px-2">
+						<img src="uncle-buck.jpeg" style="width: 90%" class="ub-image" />
+					</div>
+					<div class="flex-initial max-w-50 px-2">
+						
+						<p class="py-8">Uncle Buck’s is a non-profit organization that was Birthed out of the loss of a wonderful father, pastor, and friend.
+							<!-- Uncle Buck’s provides restoration to young men across the greater Atlanta area.  -->
+							<!-- Our founder noticed that there was a need for more than just the latest pair of sneakers for young men in the spiritual, professional, and educational realms.  -->
+							After the loss of his father, Rev. Curlee “Uncle Buck” Windham, Sr., Todd Windham turned their bonding time into a service for young men, restoring quality shoes for quality men. 
+						</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<hr />
+		<div class="py-16 px-6 bg-zinc-50">
+			<div class="max-w-7xl mx-auto">
+				<h2 class="text-left text-5xl text-zinc-500  py-8">What We Do</h2>
+				<div class="wwd-items">
+					<Card title="Shoe Gifting" image={"gift-box-svgrepo-com.svg"}></Card>
+					<Card title="Etiquette Classes" image={"tie-svgrepo-com.svg"}></Card>
+					<Card title="Community Services" image={"group-svgrepo-com.svg"}></Card>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="py-16 px-6 bg-zinc-50">
+			<div class="max-w-7xl mx-auto">
+				<h2 class="text-right text-5xl text-zinc-500  py-8">Who We Serve</h2>
+				<div class="flex flex-row justify-evenly py-8">
+					<div class="flex-initial max-w-50 px-2 heading-text-heading">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Cursus sit amet dictum sit amet justo.
+						</p>
+					</div>
+					<div class="flex-initial max-w-50 px-2">
+						<CircleProgress />
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
