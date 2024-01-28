@@ -1,48 +1,166 @@
---- 
-import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro";
+---
+//import Layout from '../layouts/Layout-light.astro';
+import Hero from '../components/v2/Hero.astro'
+//import Card from '../components/Card.astro';
+import AppFooter from '../components/v2/Footer.astro'
+import Container from "../components/Container.astro"
 
-interface Props {
-	title: string;
+/* #0C112D */
+/* #224F7D */
+
+const global = {
+    title: "Uncle Buck's",
+		tagline1: "Shoes For the Soul",
+		tagline2: "Soul",
+    subheader: "Equipping young men to put their best foot forward since 2023.",
+    links: [
+        { to: "./", label: "Home"},
+        { to: "./about", label: "About Us"},
+        { to: "./service", label: "Who We Serve"},
+        { to: "./initiatives", label: "Initiatives"},
+        { to: "./board", label: "Our Board"},
+        { to: "./support", label: "Support"},
+        { to: "./contact", label: "Contact Us"},
+    ]
 }
 
 const { title } = Astro.props;
+
+const backgroundColor =  'bg-slate-950' 
+//const backgroundColor = 'bg-gray-900'
+
+
+
+
 ---
+
+<style>
+	html {
+    /* font-family: Urbanist, sans-serif; */
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+      margin: 0;
+  }
+
+  h1 {
+    color: #4897e8
+  }
+
+  h2 {
+    color: white;
+  }
+  
+  h3 {
+    color:white;
+  }
+
+  p {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .hero {
+    height: 250px;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #fff
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 2.0;
+  }
+
+	.max-w-50 {
+		max-width: 50%
+	}
+
+	img {
+		border-radius: 7px;
+    box-shadow: 10px 4px 8px 0 rgba(0,0,0,0.2);
+	}
+  
+
+	.heading-text-heading {
+    /* font-size: var(--size-h2); */
+    /* line-height: 1; */
+    /* font-weight: 900; */
+    /* text-transform: uppercase; */
+	}
+</style>
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
-        <title>Tailus astro theme</title>
-
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    </head>
-    <body class="bg-white dark:bg-gray-900 flex flex-col min-h-screen">
-        <AppHeader />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
+    <title>{global.title} {title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@900&family=DM+Sans:wght@400&display=swap" rel="stylesheet">
+  </head>
+  <body class=`flex flex-col min-h-screen bg-zinc-50`>
+    <header class=`${backgroundColor}`>
+      <nav class="z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="" class="flex items-center">
+            <img src="logo-minimal.png" class="h-16 mr-3" alt="Uncle Buck's Logo" />
+            <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white text-sky-600">
+              {title}
+            </span>
+          </a>
+          <button 
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" 
+            data-collapse-toggle="navbar-default" 
+            type="button" 
+            aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul 
+              
+              class="font-medium flex p-4 md:p-0 mt-4 flex-row ">
+              {
+                global.links.map(link => (
+                    <li class="p-4 text-white">
+                      <a href={link.to} 
+                          class="block">
+                          {link.label}
+                        </a>
+                    </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <div class=`${backgroundColor} hero m-h-5/6 bg-gradient-to-b pb-24`>
+        <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+          <div class="blur-[106px] h-40 bg-gradient-to-br from-blue-700 to-purple-400"></div>
+          <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600"></div>
+      </div>
+      <Container>
+        <div class=`relative py-8`>
+          <h1 class="font-bold text-7xl">{title.toUpperCase()}</h1>
+        </div>
+      </Container>
+      </div>
+			<div class="py-16 px-16 bg-zinc-50">
         <slot />
-        <AppFooter />
-        <!-- <div class="fixed inset-x-6 bottom-6 z-40 mx-auto w-max">
-            <a href="https://tailus.gumroad.com/l/astls-premium" target="_blank" class="flex gap-3 rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-white/50 to-yellow-100 p-3 shadow-2xl shadow-yellow-900/50 backdrop-blur-xl dark:border-white/10 dark:from-gray-800 dark:to-black/70 dark:shadow-primary/50">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-yellow-600 dark:text-yellow-500">
-                    <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-sm font-semibold tracking-wide text-yellow-900 dark:text-white"> Upgrade to Premium</span>
-            </a>
-        </div> -->
+      </div>
+		</main>
+    <AppFooter />
     </body>
 </html>
-<style>
-    html {
-        /* font-family: Urbanist, sans-serif; */
-        font-family: sans-serif;
-        scroll-behavior: smooth;
-    }
-
-    body {
-        margin: 0;
-    }
-</style>
