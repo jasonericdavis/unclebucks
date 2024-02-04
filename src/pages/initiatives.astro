@@ -2,11 +2,57 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Container from '../components/Container.astro'
+import Card from '../components/Card.astro';
+
 ---
 <style>
   .content {
     font-size: 20px;
     line-height: 1.50;
+  }
+
+  p {
+    margin-bottom:1.5em;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .wwd-items {
+		/* display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 4em; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-around;
+    gap: 2em;
+		margin: auto;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+  .item {
+    flex: 0 0 30%;
+  }
+
+  .cta-button {
+    background-color: #224F7D;  /* #4897e8 */;
+    box-shadow: 7px 7px 8px 0 rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  .cta-button:hover{
+    background-color: #448fdc;
+  }
+  .cta-button:active{
+    transform: scale(0.95);
   }
 </style>
 <Layout title={"Initiatives"}>
@@ -30,5 +76,41 @@ import Container from '../components/Container.astro'
 
       Our partnership looks like:
     </div>
+    <div class="wwd-items">
+      <div class="item">
+        <Card title="Education &amp;<br/>Skill Development" image={"graduation-cap-svgrepo-com.svg"}>
+          We strive to equip underprivileged men with the knowledge and skills necessary for personal and professional growth. By offering educational programs, vocational training, and mentorship, we empower individuals to overcome obstacles and build a foundation for sustainable success.
+        </Card>
+      </div>
+      <div class="item">
+        <Card title="Economic<br/>Empowerment" image={"dollar-svgrepo-com.svg"}>
+          Our organization is committed to creating pathways to economic independence. We provide access to job placement services, entrepreneurship training, and financial literacy programs, ensuring that men have the tools needed to secure stable employment or start their own ventures.
+        </Card>
+      </div>
+      <div class="item">
+        <Card title="Health &amp;<br/>Well-Being" image={"health-medical-svgrepo-com.svg"}>
+          Recognizing the integral connection between physical and mental well-being, we prioritize initiatives that promote holistic health. Our programs address healthcare disparities, mental health awareness, and lifestyle choices, fostering a culture of self-care and resilience.
+        </Card>
+      </div>
+      <div class="item">
+        <Card title="Community<br/>Engagement" image={"group-svgrepo-com.svg"}>
+          Building a sense of community is crucial for lasting change. We actively engage with local communities to create supportive networks, encourage collaboration, and break down societal stigmas. By fostering a sense of belonging, we empower men to overcome isolation and thrive together.
+        </Card>
+      </div>
+      <div class="item">
+        <Card title="Advocacy &amp;<br/>Social Justice" image={"law-svgrepo-com.svg"}>
+          We are dedicated to advocating for policies and initiatives that address systemic issues contributing to the underprivileged status of men. By engaging in dialogue and partnerships with policymakers and community leaders, we work towards creating a more just and equitable society.
+        </Card>
+      </div>
+    </div>
+    <div class="content py-8">
+      <p>
+        Through these integrated efforts, Uncle Buck's aspires to be a catalyst for positive change, 
+        inspiring underprivileged men to redefine their narratives and contribute meaningfully to the social fabric. 
+        Together, we envision a future where every man has the opportunity to reach his full potential, 
+        breaking the cycle of poverty and creating a ripple effect of transformation within our communities.
+      </p>
+    </div>
+    <button style={{margin: 'auto', display: 'block'}} class="cta-button">Partner With Us</button>
   </Container>
 </Layout>

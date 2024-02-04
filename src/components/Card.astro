@@ -28,7 +28,7 @@ const { title, image } = Astro.props;
 		margin: auto;
 		max-width: 140px;
 		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
 	}
 
 	.title {
@@ -42,9 +42,16 @@ const { title, image } = Astro.props;
     letter-spacing: .33px;
 		text-align: center;
     text-transform: uppercase;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 		color: #224F7D;
+	}
+
+	.body {
+		padding: 1em;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
 	}
 
 </style>
@@ -54,7 +61,7 @@ const { title, image } = Astro.props;
 		<img src={image} />
 	</div>
 	<div class="title">
-		<h1>{title}</h1>
+		<h1 set:html={title} />
 	</div>
 	<div class="body">
 		<slot name="body"> 
