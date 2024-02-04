@@ -1,0 +1,119 @@
+
+---
+import Layout from '../layouts/Layout.astro'
+import Container from '../components/Container.astro'
+import Card from '../components/MemberCard.astro';
+
+---
+<style>
+  .content {
+    font-size: 20px;
+    line-height: 1.50;
+  }
+
+  p {
+    margin-bottom:1.5em;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  img {
+		border-radius: 7px;
+    /* box-shadow: 10px 4px 8px 0 rgba(0,0,0,0.2); */
+	}
+
+  .ceo {
+    /* width: 60%; */
+    margin: auto;
+  }
+
+  .ceo-name {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .ceo-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .ceo-img {
+    height: 300px;
+    margin: auto;
+  }
+
+  .ceo-bio {
+    font-size: 20px;
+    line-height: 2em;
+  }
+
+  .cta-button {
+    background-color: #224F7D;  /* #4897e8 */;
+    box-shadow: 7px 7px 8px 0 rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  .cta-button:hover{
+    background-color: #448fdc;
+  }
+  .cta-button:active{
+    transform: scale(0.95);
+  }
+</style>
+<Layout title={"Our Board"}>
+  <Container>
+    <Card name="Todd Windham" title="CEO" image={"member.png"}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Massa eget egestas purus viverra. Quis vel eros donec ac odio tempor orci dapibus. 
+        Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt.
+    </Card>
+
+    <Card name="Kristopher Wisdom" title="President" image={"member.png"}>
+      Meet Kristopher Wisdom, a dynamic Realtor and investor with a passion for making a positive impact. 
+      With a zest for exploration, he finds joy in traveling, engaging in sports, and embracing outdoor activities. 
+      Beyond his professional pursuits, Kristopher finds fulfillment in helping others and dedicating himself to mentoring youth. 
+      Through his expertise in the real estate industry and his commitment to guiding young minds, Kristopher embodies the values of compassion, leadership, and empowerment.
+    </Card>
+
+    <Card name="Derod Moodey" title="Vice President" image={"derod.jpg"}>
+      Husband, Father, Mentor, Senior IT Manager, and entrepreneur. Resides in Jacksonville, FL. Bachelor’s degree in computer information systems, and masters of business administration.
+    </Card>
+
+    <Card name="Ysaak Wisdom" title="Treasurer" image={"member.png"}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Massa eget egestas purus viverra. Quis vel eros donec ac odio tempor orci dapibus. 
+      Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt.
+    </Card>
+
+    <Card name="Laurence Windham" title="Secretary" image={"member.png"}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Massa eget egestas purus viverra. Quis vel eros donec ac odio tempor orci dapibus. 
+      Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt.
+    </Card>
+
+    <Card name="Henry Oston" title="Member" image={"henry.jpg"}>
+      Level 5 teacher, bio teacher, stem fellows graduate, mentor, member of kappa alpha psi incorporated
+    </Card>
+
+    <Card name="Cedrick Moody" title="Member" image={"member.png"}>
+      Cederick Moody, is a 40 yr old Air Force retiree of 21 yrs. 
+      He is currently a recruiter servicing the automotive manufacturers around the US and several other countries. 
+      He owns Xcellence Trucking Services LLC and is in the process of diversifying/expanding Xcellence into Garage Door Services. 
+      He has additional experiences in Law Enforcement, Public Health, and Commercial Truck Driving. Lastly Cederick has a wife, 2 kids, and 2 grandkids.
+    </Card>
+
+    <Card name="Jason Davis" title="Member" image={"member.png"}>
+      Jason Davis is a husband and father of two boys. He holds a bachelor’s in Computer Science from Oakwood University as well as a Master’s in Software Engineering from Auburn University. 
+      He currently works as a Principal Software Engineer for a medical device startup. 
+      Jason also serves as the president of a youth basketball association that organizes over 20 teams from the ages of 5-18. 
+      During his free time Jason likes to play golf and spend time with family friends.
+    </Card>
+  </Container>
+</Layout>

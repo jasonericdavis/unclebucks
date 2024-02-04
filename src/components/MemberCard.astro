@@ -1,0 +1,84 @@
+---
+interface Props {
+  name: string;
+	title: string;
+	image: string;
+}
+
+const { name, title, image } = Astro.props;
+---
+
+<style>
+  .item {
+    position: relative;
+    padding-left: 125px;
+    margin-bottom: 50px;
+  }
+
+	img {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #224F7D;
+    box-shadow: 10px 4px 8px 0 rgba(0,0,0,0.2);
+    transform: none;
+	}
+
+  .wrapper {
+    background-color: #eceef1;
+    margin-left: -50px;
+    /* padding-left: 160px; */
+    min-height: 200px;
+    padding: 30px 40px;
+  }
+
+  .details {
+    margin-left: 60px;
+  }
+
+  .name {
+		font-family: 'Lato', sans-serif;
+		font-size: 28px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: .33px;
+		color: #224F7D;
+    padding-bottom: 10px;
+	}
+
+	.title {
+		font-family: 'Lato', sans-serif;
+		font-size: 18px;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: .33px;
+    padding-bottom: 10px;
+	}
+
+	.body {
+		/* padding: 1em; */
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+	}
+
+</style>
+
+<div class="item">
+  <img src={image} />
+  <div class="wrapper">
+    <div class="details">
+      <h1 set:html={name} class="name" />
+      <h2 set:html={title} class="title italic" />
+      <div class="body">
+        <slot name="body"> 
+          <slot />
+        </slot>
+      </div>
+    </div>
+  </div>
+</div>
